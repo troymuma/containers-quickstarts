@@ -31,7 +31,7 @@ node('jdk8') {
   // def buildInfo = Artifactory.newBuildInfo()
   // def scannerHome = tool env.SONARQUBE_TOOL
   def mvnHome = tool 'M3'
-  def mvnCmd = "${mvnHome}bin/mvn"
+  def mvnCmd = "${mvnHome}/bin/mvn"
   String pomFileLocation = env.BUILD_CONTEXT_DIR ? "${env.BUILD_CONTEXT_DIR}/pom.xml" : "pom.xml"
 
   stage('SCM Checkout') {
